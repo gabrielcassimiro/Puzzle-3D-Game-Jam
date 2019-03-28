@@ -6,6 +6,7 @@ TagManager:
   tags:
   - manual
   - Item
+  - Database
   layers:
   - Default
   - TransparentFX
