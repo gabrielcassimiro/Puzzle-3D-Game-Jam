@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private string horizontalInputName, verticalInputName;
+    private Animator anim;
 
     [SerializeField] private float movementSpeed;
 
@@ -12,6 +14,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake() {
         charController = GetComponent<CharacterController>();
+        anim = this.GetComponent<Animator>();
     }
 
     private void Update() {
@@ -26,5 +29,14 @@ public class PlayerMove : MonoBehaviour
         Vector3 rightMove = transform.right * horizInput;
 
         charController.SimpleMove(forwardMove + rightMove);
+        if(horizInput > 0 || horizInput < 0){
+            anim.SetBool("Walk", true);
+        } 
+        if(verInput > 0 || verInput < 0){
+            anim.SetBool("Walk", true);
+        }        
+        else if(verInput == 0 || horizInput == 0){
+            anim.SetBool("Walk", false);
+        }
     }
 }
