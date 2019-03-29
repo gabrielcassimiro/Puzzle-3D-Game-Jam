@@ -34,24 +34,18 @@ public class ActionLever : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && rot >= -0.2802625f)
         {
-            rot = (gameObject.transform.rotation.x - Input.mousePosition.x) * 0.0005f;  
-            gameObject.transform.Rotate(rot, 0f,0f);
+            rot = (gameObject.transform.rotation.x - Input.mousePosition.x) * 0.0005f;
+            gameObject.transform.Rotate(rot, 0f, 0f);
         }
-
-        
-        
-        /*if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 50) && Input.GetMouseButton(0))
+    }
+    private void verificar()
+    {
+        if(rot >= -0.2802625f)
         {
-            Vector3 playerToMouse = hit.point - transform.position;
-            playerToMouse.y = 0;
-            Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-            rb.MoveRotation(newRotation);
-        }*/
-
-
-
+            //ALGUM CODIGO PRA DESTRAVAR O BOOL DE OUTRO CODIGO PRA FAZER A PORTA ABRIR
+        }
     }
 
 }
