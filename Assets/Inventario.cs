@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class inventario : MonoBehaviour
+public class Inventario : MonoBehaviour
 {
-    public GameObject inventário;
+    public GameObject inventario;
     private bool invhab;
 
     private int allslots;
@@ -26,14 +26,9 @@ public class inventario : MonoBehaviour
     void Update()
     {
       if(Input.GetKeyDown(KeyCode.I))
-            invhab = !invhab;
-      if(invhab == true)
-        {
-        inventario.SetActive(true);
-        }
-      else
-        {
-        inventario.SetActive(false);
-        }
+      {
+        invhab = !invhab;
+        inventario.SetActive(invhab);
+      }
     }
 }
