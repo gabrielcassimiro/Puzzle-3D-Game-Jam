@@ -320,7 +320,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handSprite: {fileID: 8557421722915077512}
+  bookObject: {fileID: 0}
+  macanetaObject: {fileID: 0}
   TagItemName: Item
+  book: 0
+  macaneta: 0
+  alavanca: 0
 --- !u!1 &8557421723767098813
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,13 @@ TagManager:
   - manual
   - Item
   - Database
+  - Book
+  - Alavanca
+  - Macaneta
+  - Book2
+  - Macaneta2
+  - Btn
+  - Btn2
   layers:
   - Default
   - TransparentFX

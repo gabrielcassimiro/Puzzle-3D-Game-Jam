@@ -34,7 +34,7 @@ public class ActionLever : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetMouseButton(0) && rot >= -0.2802625f)
+        if (Input.GetMouseButton(0) && rot >= -0.1307194f)
         {
             rot = (gameObject.transform.rotation.x - Input.mousePosition.x) * 0.0005f;
             gameObject.transform.Rotate(rot, 0f, 0f);
