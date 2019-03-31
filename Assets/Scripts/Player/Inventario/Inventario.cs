@@ -20,8 +20,8 @@ void Start()
   database = GameObject.FindGameObjectWithTag("Database").GetComponent<ItemDatabase>();
   inventoryPanel = GameObject.Find("Inventario ");
   slotPanel = inventoryPanel.transform.Find("Slot Panel").gameObject;
-  //invhab = false;
-  //inventoryPanel.SetActive(invhab);
+  invhab = false;
+  inventoryPanel.SetActive(invhab);
 
   for (int i = 0; i < slotAmount; i++) // coloca todos os slots, de acordo com a quantidade
   {
